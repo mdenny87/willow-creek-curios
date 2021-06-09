@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Lato, Arial, sans-serif;
+    color: #F2D0AA;
+}
+
+header{
+    background-image: url(img/twilight-tree.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: 'Cinzel Decorative', Lato, Arial, sans-serif;
+}
+
+header h1{
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    font-weight:
+}
+
+header h2{
+    font-size: 3rem;
+    letter-spacing: .8rem;
+    position: absolute;
+    width: 100%;
+    bottom: 12%;
+}
+
+header nav{
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+}
+
+nav a:hover{
+    border-bottom-color: #F2D0AA;
+}
+
+main{
+    background: linear-gradient(-5deg, #040404, #3A1526, 30%, #321D42, 80%, #040404);
+    display: grid;
+    grid-template:
+        'featured featured contact' auto
+        'about events events' auto
+        /1fr 1fr 1fr;
+    grid-gap: 5%;
+    padding: 5%;
+}
+
+main section{
+    background: rgba(0, 0, 0, .05);
+    font-size: 2rem;
+    min-height: 50vh;
+}
+
+main section h3{
+    font-family: 'Cinzel Decorative', Lato, Arial, sans-serif;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 2rem;
+}
+
+main section a{
+    color: inherit;
+    font-size: inherit;
+}
+
+#contact iframe{
+    margin: 5% 0%;
+}
+
+#featured{
+    grid-area: featured;
+}
+
+#contact{
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contact h4{
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 10%;
+    font-size: 2rem;
+}
+
+.contact-info{
+    padding-bottom: 20%;
+}
+
+#contact p, #contact address{
+    text-align: center;
+}
+
+#contact button:hover{
+    cursor: pointer;
+}
+
+.facebook img, .instagram img{
+    width: 40px;
+}
+
+.instagram img{
+    margin-left: 3%;
+}
+
+#about{
+    grid-area: about;
+}
+
+#events{
+    grid-area: events;
+}
+
+footer{
+    background-color: #0C0306;
+    text-align: center;
+    position: relative;
+    padding: 15% 0 2% 0;
+}
+
+footer nav{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+}
+
+footer p{
+    line-height: 2rem;
+    }
