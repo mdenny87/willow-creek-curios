@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +15,7 @@ html {
 body {
   font-family: Lato, Arial, sans-serif;
   color: #f2d0aa;
+  text-align: center;
 }
 
 header {
@@ -21,47 +23,28 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
   font-family: "Cinzel Decorative", Lato, Arial, sans-serif;
+  position: relative;
 }
 
-header h1 {
-  font-size: 6rem;
-  letter-spacing: 2rem;
-  width: 100%;
+header h1{
   position: absolute;
-  top: 13%;
+  width: 100%;
 }
 
-header h2 {
-  font-size: 3rem;
-  letter-spacing: 0.8rem;
+header h2{
   position: absolute;
   width: 100%;
-  bottom: 10%;
-}
-
-header nav {
-  position: absolute;
-  width: 100%;
-  bottom: 1%;
 }
 
 nav ul {
   list-style-type: none;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 nav a {
   color: inherit;
   border-bottom: 2px solid transparent;
-  font-size: 2rem;
   text-decoration: none;
-  letter-spacing: 0.3rem;
   transition: border-bottom-color 1s ease;
 }
 
@@ -79,27 +62,14 @@ main {
     80%,
     #040404
   );
-  display: grid;
-  grid-template:
-    "featured featured contact" auto
-    "about events events" auto
-    / 1fr 1fr 1fr;
-  grid-gap: 5%;
-  padding: 5% 5% 10% 5%;
 }
 
 main section {
   background: rgba(0, 0, 0, 0.05);
-  font-size: 2rem;
-  min-height: 50vh;
 }
 
 main section h3 {
   font-family: "Cinzel Decorative", Lato, Arial, sans-serif;
-  letter-spacing: 0.3rem;
-  text-align: center;
-  margin-top: 2vh;
-  font-size: 2rem;
 }
 
 main section a {
@@ -107,30 +77,11 @@ main section a {
   font-size: inherit;
 }
 
-#contact iframe {
-  margin: 5% 0%;
-}
-
-#featured {
-  grid-area: featured;
-}
-
-.gallery {
-  margin: 1%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
 .img-container {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 250px;
-  width: 300px;
-  margin: 2% 0;
 }
 
 .one {
@@ -181,73 +132,207 @@ main section a {
   background-image: url(./img/gallery/werewolfcandleholder.jpg);
 }
 
-#contact {
-  grid-area: contact;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-
-#contact h4 {
-  text-align: center;
-  margin-bottom: 1%;
-  margin-top: 10%;
-  font-size: 2rem;
-}
-
-.contact-info {
-  padding-bottom: 20%;
-}
-
-#contact p,
-#contact address {
-  text-align: center;
-}
+.facebook img,
+  .instagram img {
+    width: 40px;
+  }
+  
+  .instagram img {
+    margin-left: 3%;
+  }
 
 #contact button:hover {
   cursor: pointer;
 }
 
-.facebook img,
-.instagram img {
-  width: 40px;
-}
-
-.instagram img {
-  margin-left: 3%;
-}
-
 #about {
-  grid-area: about;
-  padding: 5%;
-}
-
-#about p {
-  margin: 3% 0;
-  font-size: 2rem;
-}
-
-#about h3 {
-  margin-bottom: 10%;
-}
-
-#events {
-  grid-area: events;
+  text-align: left;
 }
 
 footer {
   background-color: #0c0306;
-  text-align: center;
-  position: relative;
-  padding: 15% 0 2% 0;
 }
 
-footer nav {
-  position: absolute;
-  top: 35%;
-  width: 100%;
+/* Desktop and Landscape Tablet */
+@media (min-width: 1024px) {
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  header h1 {
+    font-size: 6rem;
+    letter-spacing: 2rem;
+    top: 15%;
+  }
+  
+  header h2 {
+    font-size: 3rem;
+    letter-spacing: 0.8rem;
+    bottom: 12%;
+  }
+  
+  header nav {
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  nav a {
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+  }
+  
+  main {
+    display: grid;
+    grid-template:
+      "featured featured contact" auto
+      "about events events" auto
+      / 1fr 1fr 1fr;
+    grid-gap: 5%;
+    padding: 5% 5% 10% 5%;
+  }
+  
+  main section {
+    font-size: 2rem;
+    min-height: 50vh;
+  }
+  
+  main section h3 {
+    letter-spacing: 0.3rem;
+    margin-top: 2vh;
+    font-size: 2rem;
+  }
+  
+  #contact iframe {
+    margin: 5% 0%;
+  }
+  
+  .gallery {
+    margin: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  
+  .img-container {
+    height: 250px;
+    width: 300px;
+    margin: 2% 0;
+  }
+  
+  #featured{
+    grid-area: featured;
+  }
+
+  #contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  #contact h4 {
+    margin-bottom: 1%;
+    margin-top: 10%;
+    font-size: 2rem;
+  }
+  
+  .contact-info {
+    padding-bottom: 20%;
+  }
+  
+  #about {
+    grid-area: about;
+    padding: 5%;
+  }
+  
+  #about p {
+    margin: 3% 0;
+    font-size: 2rem;
+  }
+  
+  #about h3 {
+    margin-bottom: 10%;
+  }
+
+  #events{
+    grid-area: events;
+  }
+  
+  footer {
+    position: relative;
+    padding: 15% 0 2% 0;
+  }
+  
+  footer nav {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+  }
+  
+  footer p {
+    line-height: 2rem;
+  }
 }
 
-footer p {
-  line-height: 2rem;
+/* Landscape Mobile and Portrait Tablet */
+
+
+/* Portrait Mobile */
+@media (max-width: 420px) {
+  header {
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  header h1{
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    top: 27%;
+  }
+
+  header h2{
+    bottom: 8%;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+  }
+
+  header nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), 90%, rgba(0, 0, 0, 0));
+    width: 100%;
+    line-height: 5rem;
+    border-bottom-color: inherit;
+    padding: 5% 5% 20% 5%;
+  }
+
+  header ul{
+    columns: 2;
+    --webkit-columns: 2;
+    --moz-columns: 2;
+    width: 100%;
+  }
+
+  header a{
+    font-size: 1.3rem;
+  }
+
+  main{
+
+  }
+
+  main section{
+    min-height: 50vh;
+    padding-bottom: 20%;
+  }
 }
